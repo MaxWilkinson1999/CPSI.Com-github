@@ -14,10 +14,27 @@
         .header {
             text-align: center;
             padding: 20px;
-            background-color: teal;
+            background-color: darkgreen;
             color: white;
             font-size: 24px;
         }
+        button {
+    display: inline-block;
+    color: black;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    border: 2px solid darkgreen;
+    border-radius: 15px;
+    margin: 0 10px;
+    transition: background-color 0.3s, color 0.3s;
+
+}
+
+button:hover {
+    background-color: darkgreen;
+    color: white;
+}
 
         .content {
             text-align: center;
@@ -25,7 +42,7 @@
         }
 
         .label {
-            background-color: teal;
+            background-color: darkgreen;
             color: white;
             font-size: 24px;
             padding: 15px;
@@ -44,13 +61,22 @@
     <div class="label">
         REVIEWS
     </div>
-
+    <div class="navbar">
+        <button onclick="window.location.href='CPSIServices.html'">Services</button>
+        <button onclick="window.location.href='CPSIAbout.html'">About</button>
+        <button onclick="window.location.href='CPSIContact.html'">Contact</button>
+        <button onclick="window.location.href='CPSIReviews.html'">Reviews</button>
+    </div>
     <p>PLACEHOLDER</p>
 </div>
-<meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Google Reviews Example</title>
-    <iframe src="https://www.google.com/search?q=carolina+piping+systems+google+reviews&sca_esv=919619def4e17474&rlz=1C1CHBF_enUS1024US1024&sxsrf=ACQVn0-EDW5mFvAaz4d3EwG0xS7ThfwJgg%3A1709215724702&ei=7I_gZeaTKtXcwN4P__iXMA&oq=carolina+piping+systems+google+re&gs_lp=Egxnd3Mtd2l6LXNlcnAiIWNhcm9saW5hIHBpcGluZyBzeXN0ZW1zIGdvb2dsZSByZSoCCAAyBRAhGKABMgUQIRifBTIFECEYnwVIrRVQnARYrQ1wAXgAkAEBmAHyAqABpQyqAQcwLjkuMC4xuAEByAEA-AEBmAIKoAKXCsICDRAjGIAEGIoFGLADGCfCAgcQIxiwAxgnwgIOEC4YgAQYxwEYrwEYsAPCAgkQABgIGB4YsAPCAg4QABiABBiKBRiGAxiwA8ICChAjGIAEGIoFGCfCAgQQIxgnwgILEAAYgAQYigUYhgPCAgQQIRgVmAMAiAYBkAYIkgcDMS45&sclient=gws-wiz-serp#" width="600" height="400" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-
+<div id="google-reviews"></div>
+<div id="button-container">
+    <button onclick="window.location.href='https://search.google.com/local/writereview?placeid=ChIJD4WLbTO9VogR45sCC2UQEck'" target="_blank">
+        Leave a Review
+        <img src="GOOGLEREV.jpg" alt="Button Image2">
+    </button>
+    
+</div>
+    
 </body>
 </html>

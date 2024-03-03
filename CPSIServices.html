@@ -14,10 +14,27 @@
         .header {
             text-align: center;
             padding: 20px;
-            background-color: teal;
+            background-color: darkgreen;
             color: white;
             font-size: 24px;
         }
+        button {
+    display: inline-block;
+    color: black;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    border: 2px solid darkgreen;
+    border-radius: 15px;
+    margin: 0 10px;
+    transition: background-color 0.3s, color 0.3s;
+
+}
+
+button:hover {
+    background-color: darkgreen;
+    color: white;
+}
 
         .content {
             text-align: center;
@@ -25,7 +42,7 @@
         }
 
         .label {
-            background-color: teal;
+            background-color: darkgreen;
             color: white;
             font-size: 24px;
             padding: 15px;
@@ -43,6 +60,12 @@
 <div class="content">
     <div class="label">
         SERVICES
+    </div>
+    <div class="navbar">
+        <button onclick="window.location.href='CPSIServices.html'">Services</button>
+        <button onclick="window.location.href='CPSIAbout.html'">About</button>
+        <button onclick="window.location.href='CPSIContact.html'">Contact</button>
+        <button onclick="window.location.href='CPSIReviews.html'">Reviews</button>
     </div>
 
     <p>PLACEHOLDER</p>
