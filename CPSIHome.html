@@ -14,7 +14,7 @@
         .header {
             text-align: center;
             padding: 20px;
-            background-color: teal;
+            background-color: darkgreen;
             color: white;
             font-size: 24px;
         }
@@ -25,40 +25,74 @@
         }
 
         button {
-            display: inline-block;
-            color: black;
-            text-align: center;
-            padding: 14px 20px;
-            text-decoration: none;
-            border: 2px solid teal;
-            border-radius: 15px;
-            margin: 0 10px; 
-        }
+    display: inline-block;
+    color: black;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    border: 2px solid darkgreen;
+    border-radius: 15px;
+    margin: 0 10px;
+    transition: background-color 0.3s, color 0.3s;
 
-        button {
-            display: inline-block;
-            color: black;
-            text-align: center;
-            padding: 14px 20px;
-            text-decoration: none;
-            border: 2px solid teal;
-            border-radius: 15px;
-            margin: 0 10px; 
-        }
+}
+
+button:hover {
+    background-color: darkgreen;
+    color: white;
+}
+
 
         .navbar a:hover {
             background-color: teal;
             color: white;
         }
 
-        .images-container {
-            text-align: center;
+        .slideshow-container {
+            max-width: 600px;
+            margin: auto;
+            position: relative;
+            overflow: hidden;
             margin-top: 30px;
+            border: 10px solid black;
+            border-radius: 15px; 
         }
 
-        .images-container img {
-            width: 300px; 
-            margin: 10px; 
+        .mySlides {
+            display: none;
+            text-align: center;
+            width: 100%; 
+        }
+
+        .mySlides img {
+            width: 100%; 
+            height: 300px; 
+            object-fit: cover; 
+        }
+
+       
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            background-color: darkgreen;
+        }
+
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        .prev:hover, .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
         }
     </style>
 </head>
@@ -69,18 +103,81 @@
 </div>
 
 <div class="navbar">
-    <button onclick= "window.location.href='CPSIServices.html'">Services</button>
-    <button onclick= "window.location.href='CPSIAbout.html'">About</button>
-    <button onclick= "window.location.href='CPSIContact.html'">Contact</button>
-    <button onclick= "window.location.href='CPSIReviews.html'">Reviews</button>
+    <button onclick="window.location.href='CPSIServices.html'">Services</button>
+    <button onclick="window.location.href='CPSIAbout.html'">About</button>
+    <button onclick="window.location.href='CPSIContact.html'">Contact</button>
+    <button onclick="window.location.href='CPSIReviews.html'">Reviews</button>
 </div>
 
-<div class="images-container">
-    <img src="CPSIbuild.png" alt="Image 1">
-    <img src="PIPE_image_1.jpg" alt="Image 2">
-    <img src="PIPE_image_2.jpg" alt="Image 3">
+<div class="slideshow-container">
+    <div class="mySlides">
+        <img src="CPSIbuild.png" alt="Image 0">
+    </div>
+
+    <div class="mySlides">
+        <img src="PIPE_image_1.jpg" alt="Image 1">
+    </div>
+
+    <div class="mySlides">
+        <img src="PIPE_image_2.jpg" alt="Image 2">
+    </div>
+
+    <div class="mySlides">
+        <img src="Pipe_Image3.jpg" alt="Image 3">
+    </div>
+
+    <div class="mySlides">
+        <img src="Pipe_Image4.jpg" alt="Image 4">
+    </div>
+
+    <div class="mySlides">
+        <img src="Pipe_Image6.jpg" alt="Image 6">
+    </div>
+
+    <div class="mySlides">
+        <img src="Pipe_Image7.jpg" alt="Image 7">
+    </div>
+
+    <div class="mySlides">
+        <img src="Pipe_Image8.jpg" alt="Image 8">
+    </div>
+
+    <div class="mySlides">
+        <img src="Pipe_Image9.jpg" alt="Image 9">
+    </div>
+
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
 </div>
+
+<script>
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+        let i;
+        const slides = document.getElementsByClassName("mySlides");
+
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+
+        slideIndex++;
+
+        if (slideIndex > slides.length) {
+            slideIndex = 1;
+        }
+
+        slides[slideIndex - 1].style.display = "block";
+        setTimeout(showSlides, 4000);
+    }
+
+    function plusSlides(n) {
+        clearTimeout(); 
+        showSlides((slideIndex += n));
+    }
+</script>
+
 
 </body>
 </html>
-
