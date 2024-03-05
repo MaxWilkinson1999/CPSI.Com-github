@@ -132,7 +132,7 @@
         <button onclick="window.location.href='CPSIHome.html'">Home</button>
     </div>
 
-    <div class="service-box" onclick="openServiceModal('Ammonia Piping', 'Placeholder.')">
+    <div class="service-box" onclick="openServiceModal('Ammonia Piping', ' Ammonia piping is a safe, efficient, cost-effective, and low-carbon way of transporting ammonia.Ammonia piping can be used for refrigeration or for energy purposes.')">
         <img class="service-image" src="Ammonia_Pipe.jpg" alt="Ammonia Piping">
         <div class="service-label">Ammonia Piping</div>
     </div>
@@ -148,8 +148,8 @@
     </div>
 </div>
 
-<div id="serviceModal" class="modal">
-    <div class="modal-content">
+<div id="serviceModal" class="modal" onclick="closeServiceModal()">
+    <div class="modal-content" onclick="event.stopPropagation();">
         <span class="close" onclick="closeServiceModal()">&times;</span>
         <h2 id="modalTitle"></h2>
         <p id="modalDescription"></p>
@@ -164,6 +164,8 @@
     }
 
     function closeServiceModal() {
+        document.getElementById('modalTitle').innerText = '';
+        document.getElementById('modalDescription').innerText = '';
         document.getElementById('serviceModal').style.display = 'none';
     }
 </script>
