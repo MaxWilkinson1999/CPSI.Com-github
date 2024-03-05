@@ -18,23 +18,23 @@
             color: white;
             font-size: 24px;
         }
+
         button {
-    display: inline-block;
-    color: black;
-    text-align: center;
-    padding: 14px 20px;
-    text-decoration: none;
-    border: 2px solid darkgreen;
-    border-radius: 15px;
-    margin: 0 10px;
-    transition: background-color 0.3s, color 0.3s;
+            display: inline-block;
+            color: black;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+            border: 2px solid darkgreen;
+            border-radius: 15px;
+            margin: 0 10px;
+            transition: background-color 0.3s, color 0.3s;
+        }
 
-}
-
-button:hover {
-    background-color: darkgreen;
-    color: white;
-}
+        button:hover {
+            background-color: darkgreen;
+            color: white;
+        }
 
         .content {
             text-align: center;
@@ -48,6 +48,69 @@ button:hover {
             padding: 15px;
             border-radius: 15px;
             margin-bottom: 20px;
+        }
+
+        .service-box {
+            position: relative;
+            display: inline-block;
+            width: 200px;
+            height: 150px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            margin: 10px;
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .service-box:hover {
+            transform: scale(1.1);
+        }
+
+        .service-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .service-label {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: whitesmoke;
+            background-color: black;
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+            width: 100%;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: left;
+            position: relative;
+        }
+
+        .close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
         }
     </style>
 </head>
@@ -69,8 +132,41 @@ button:hover {
         <button onclick="window.location.href='CPSIHome.html'">Home</button>
     </div>
 
-    <p>PLACEHOLDER</p>
+    <div class="service-box" onclick="openServiceModal('Ammonia Piping', 'Placeholder.')">
+        <img class="service-image" src="Ammonia_Pipe.jpg" alt="Ammonia Piping">
+        <div class="service-label">Ammonia Piping</div>
+    </div>
+
+    <div class="service-box" onclick="openServiceModal('Hot-Oil Piping', 'Placeholder')">
+        <img class="service-image" src="Hot_Oil.jpg" alt="Hot-Oil Piping">
+        <div class="service-label">Hot-Oil Piping</div>
+    </div>
+
+    <div class="service-box" onclick="openServiceModal('HVAC', 'Placeholder')">
+        <img class="service-image" src="HVAC_CPSI.jpg" alt="HVAC">
+        <div class="service-label">HVAC</div>
+    </div>
 </div>
+
+<div id="serviceModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeServiceModal()">&times;</span>
+        <h2 id="modalTitle"></h2>
+        <p id="modalDescription"></p>
+    </div>
+</div>
+
+<script>
+    function openServiceModal(title, description) {
+        document.getElementById('modalTitle').innerText = title;
+        document.getElementById('modalDescription').innerText = description;
+        document.getElementById('serviceModal').style.display = 'flex';
+    }
+
+    function closeServiceModal() {
+        document.getElementById('serviceModal').style.display = 'none';
+    }
+</script>
 
 </body>
 </html>
