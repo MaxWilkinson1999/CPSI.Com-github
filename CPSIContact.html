@@ -18,27 +18,28 @@
             color: white;
             font-size: 24px;
         }
+
         button {
-    display: inline-block;
-    color: black;
-    text-align: center;
-    padding: 14px 20px;
-    text-decoration: none;
-    border: 2px solid darkgreen;
-    border-radius: 15px;
-    margin: 0 10px;
-    transition: background-color 0.3s, color 0.3s;
+            display: inline-block;
+            color: black;
+            text-align: center;
+            padding: 10px 15px; 
+            text-decoration: none;
+            border: 2px solid darkgreen;
+            border-radius: 10px;
+            margin: 0 10px;
+            transition: background-color 0.3s, color 0.3s;
+        }
 
-}
+        button:hover {
+            background-color: darkgreen;
+            color: white;
+        }
 
-button:hover {
-    background-color: darkgreen;
-    color: white;
-}
         #button-container {
             display: flex;
             align-items: flex-start;
-            padding:20px;
+            padding: 20px;
         }
 
         .content {
@@ -53,6 +54,15 @@ button:hover {
             padding: 15px;
             border-radius: 15px;
             margin-bottom: 20px;
+        }
+
+        
+        #gmail-button img,
+        #maps-button img {
+            width: 50px;
+            height: 50px;
+            object-fit: cover;
+            border-radius: 50%; 
         }
     </style>
 </head>
@@ -77,8 +87,12 @@ button:hover {
 </div>
 
 <div id="button-container">
-    <button onclick="window.location.href='https://maps.app.goo.gl/mD7WuCDQFSFPMHSBA';">
-        <img src="GOOGLEMAPS2.jpg" alt="Button Image">
+    <button id="gmail-button" onclick="window.location.href='https://mail.google.com/mail/?view=cm&fs=1&to=maxwilkinson39@gmail.com&su=Subject%20here&body=Hello,%20CPSI';">
+        <img src="GMAIL_ICON_IMAGE.jpg" alt="Gmail Button Image">
+    </button>
+    
+    <button id="maps-button" onclick="window.location.href='https://maps.app.goo.gl/mD7WuCDQFSFPMHSBA';">
+        <img src="GOOGLEMAPS2.jpg" alt="Google Maps Button Image">
     </button>
 </div>
 

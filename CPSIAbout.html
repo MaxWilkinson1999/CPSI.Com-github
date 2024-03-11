@@ -20,22 +20,21 @@
         }
 
         button {
-    display: inline-block;
-    color: black;
-    text-align: center;
-    padding: 14px 20px;
-    text-decoration: none;
-    border: 2px solid darkgreen;
-    border-radius: 15px;
-    margin: 0 10px;
-    transition: background-color 0.3s, color 0.3s;
+            display: inline-block;
+            color: black;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+            border: 2px solid darkgreen;
+            border-radius: 15px;
+            margin: 0 10px;
+            transition: background-color 0.3s, color 0.3s;
+        }
 
-}
-
-button:hover {
-    background-color: darkgreen;
-    color: white;
-}
+        button:hover {
+            background-color: darkgreen;
+            color: white;
+        }
 
         .content {
             text-align: center;
@@ -50,11 +49,66 @@ button:hover {
             border-radius: 15px;
             margin-bottom: 20px;
         }
+
+        .about-section {
+            padding: 20px;
+            text-align: left;
+        }
+
+        .visionaries-section {
+            padding: 20px;
+            text-align: left;
+        }
+
+        .popup-container {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(5px);
+            z-index: 1;
+        }
+
+        .popup {
+            position: fixed;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            background-color: white;
+            border: 2px solid darkgreen;
+            border-radius: 5px;
+            z-index: 2;
+        }
+
+        .close-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+        }
+
+        .facility-image-button {
+            display: inline-block;
+            border: 2px solid transparent;
+            padding: 0;
+            margin: 0;
+            cursor: pointer;
+            transition: border-color 0.3s;
+            border-radius: 5px; 
+        }
+
+       
+
+        .facility-image {
+            max-width: 40%;
+            height: auto;
+            border-radius: 5px;
+        }
     </style>
 </head>
 <body>
-
-    
 
 <div class="header">
     Carolina Piping Systems Inc. - About Us
@@ -73,10 +127,42 @@ button:hover {
         <button onclick="window.location.href='CPSIHome.html'">Home</button>
     </div>
 
-    
+    <div class="about-section">
+        <h2>Our Story</h2>
+        <p>Carolina Piping Systems Inc. (CPSI) was founded on the principles of delivering excellence in the piping industry. Since our establishment, we have been dedicated to providing high-quality solutions and building lasting relationships with our clients.</p>
+        <p>Our journey began with a vision to revolutionize the piping industry. Over the years, we have evolved and grown, adapting to the ever-changing landscape. Today, we stand as a testament to our commitment to quality, innovation, and customer satisfaction.</p>
+    </div>
 
-    <p>PLACEHOLDER</p>
+    <div class="visionaries-section">
+        <h2>Meet the Visionaries</h2>
+        <h3>Mark Wilkinson</h3>
+        <p>Behind the helm of CPSI is Mark Wilkinson, a visionary leader with a passion for the piping industry. With a wealth of experience in piping solutions, Mark has been the driving force behind our success.</p>
+        <p>His commitment to excellence and customer satisfaction has shaped the culture of CPSI. Mark's leadership has been instrumental in achieving milestones and delivering outstanding service to our clients.</p>
+        <p>As Mark often says, "Quality is not an act; it is a habit." Through his leadership, CPSI has become more than just a business; it's a community dedicated to providing top-notch piping solutions and contributing to the growth of our industry.</p>
+
+        <button class="facility-image-button" onclick="showPopup()">
+            <img class="facility-image" src="Dad_Image1.jpg" alt="Mark Wilkinson">
+        </button>
+
+        <div class="popup-container" onclick="closePopup()">
+            <div class="popup">
+                <span class="close-button" onclick="closePopup()">&times;</span>
+                <h3>Mark Wilkinson</h3>
+                <p>Founder and visionary leader of Carolina Piping Systems Inc. With a wealth of experience and a commitment to excellence, Mark has been instrumental in our success.</p>
+            </div>
+        </div>
+    </div>
 </div>
+
+<script>
+    function showPopup() {
+        document.querySelector('.popup-container').style.display = 'flex';
+    }
+
+    function closePopup() {
+        document.querySelector('.popup-container').style.display = 'none';
+    }
+</script>
 
 </body>
 </html>
