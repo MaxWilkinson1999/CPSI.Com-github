@@ -70,11 +70,12 @@
             background: rgba(0, 0, 0, 0.5);
             backdrop-filter: blur(5px);
             z-index: 1;
+            justify-content: center;
+            align-items: center;
         }
 
         .popup {
             position: fixed;
-            transform: translate(-50%, -50%);
             padding: 20px;
             background-color: white;
             border: 2px solid darkgreen;
@@ -91,15 +92,13 @@
 
         .facility-image-button {
             display: inline-block;
-            border: 2px solid transparent;
+            border: none; 
             padding: 0;
             margin: 0;
             cursor: pointer;
-            transition: border-color 0.3s;
-            border-radius: 5px; 
+            border-radius: 5px;
+            overflow: hidden;
         }
-
-       
 
         .facility-image {
             max-width: 40%;
@@ -129,7 +128,7 @@
 
     <div class="about-section">
         <h2>Our Story</h2>
-        <p>Carolina Piping Systems Inc. (CPSI) was founded on the principles of delivering excellence in the piping industry. Since our establishment, we have been dedicated to providing high-quality solutions and building lasting relationships with our clients.</p>
+        <p>Carolina Piping Systems Inc. (CPSI) was founded on the principles of delivering excellence in the piping industry. Since our establishment in, we have been dedicated to providing high-quality solutions and building lasting relationships with our clients.</p>
         <p>Our journey began with a vision to revolutionize the piping industry. Over the years, we have evolved and grown, adapting to the ever-changing landscape. Today, we stand as a testament to our commitment to quality, innovation, and customer satisfaction.</p>
     </div>
 
