@@ -127,16 +127,36 @@
             border: none; 
             padding: 0;
             margin: 0;
+            max-width: 40%;
             cursor: pointer;
             border-radius: 5px;
             overflow: hidden;
+            transition: background-color 0.3s, color 0.3s;
+            margin-right:  1000px;
         }
 
         .facility-image {
             max-width: 40%;
             height: auto;
             border-radius: 5px;
+            margin-right:  1000px;
         }
+
+        .facility-image-button:hover .facility-image {
+            transform: scale(1.05);
+        }
+
+        .facility-image-button:hover {
+            background-color: transparent;
+            margin-right:  1000px;
+        }
+
+        .visionaries-section h3 {
+        margin-right:  100px;
+    }
+    .visionaries-section h2 {
+        margin-bottom: 50px; 
+    }
     </style>
 </head>
 <body>
@@ -185,32 +205,33 @@
 
     <div class="visionaries-section">
         <h2>Meet the Visionaries</h2>
-        <h3>Mark Wilkinson</h3>
-        <p>Behind the helm of CPSI is Mark Wilkinson, a visionary leader with a passion for the piping industry. With a wealth of experience in piping solutions, Mark has been the driving force behind our success.</p>
-        <p>His commitment to excellence and customer satisfaction has shaped the culture of CPSI. Mark's leadership has been instrumental in achieving milestones and delivering outstanding service to our clients.</p>
-        <p>As Mark often says, "Quality is not an act; it is a habit." Through his leadership, CPSI has become more than just a business; it's a community dedicated to providing top-notch piping solutions and contributing to the growth of our industry.</p>
 
-        <button class="facility-image-button" onclick="showPopup()">
+        <button class="facility-image-button" onclick="openServiceModal('Mark Wilkinson', 'Co-Founder and visionary leader of Carolina Piping Systems Inc. With a wealth of experience and a commitment to excellence, Mark has been instrumental in Carolina Piping Systems continued success.');">
             <img class="facility-image" src="Dad_Image1.jpg" alt="Mark Wilkinson">
         </button>
+        <h3></h3>Mark Wilkinson</h3>
 
-        <div class="popup-container" onclick="closePopup()">
-            <div class="popup">
-                <span class="close-button" onclick="closePopup()">&times;</span>
-                <h3>Mark Wilkinson</h3>
-                <p>Founder and visionary leader of Carolina Piping Systems Inc. With a wealth of experience and a commitment to excellence, Mark has been instrumental in our success.</p>
+        <div id="serviceModal" class="popup-container" onclick="closeServiceModal()">
+            <div class="popup" onclick="event.stopPropagation();">
+                <span class="close-button" onclick="closeServiceModal()">&times;</span>
+                <h3 id="modalTitle"></h3>
+                <p id="modalDescription"></p>
             </div>
         </div>
     </div>
 </div>
 
 <script>
-    function showPopup() {
-        document.querySelector('.popup-container').style.display = 'flex';
+    function openServiceModal(title, description) {
+        document.getElementById('modalTitle').innerText = title;
+        document.getElementById('modalDescription').innerText = description;
+        document.getElementById('serviceModal').style.display = 'flex';
     }
 
-    function closePopup() {
-        document.querySelector('.popup-container').style.display = 'none';
+    function closeServiceModal() {
+        document.getElementById('modalTitle').innerText = '';
+        document.getElementById('modalDescription').innerText = '';
+        document.getElementById('serviceModal').style.display = 'none';
     }
 </script>
 
