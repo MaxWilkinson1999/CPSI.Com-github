@@ -19,7 +19,7 @@
             font-size: 24px;
         }
 
-        button {
+        .button {
             display: inline-block;
             color: black;
             text-align: center;
@@ -31,7 +31,7 @@
             transition: background-color 0.3s, color 0.3s;
         }
 
-        button:hover {
+        .button:hover {
             background-color: darkgreen;
             color: white;
         }
@@ -112,6 +112,131 @@
             right: 10px;
             cursor: pointer;
         }
+
+        .offer-container {
+            background-color: darkgreen;
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 5px 5px 0px black;
+            max-width: 300px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 50px;
+        }
+
+        .offer-text {
+            font-size: 24px;
+            color: white;
+        }
+
+        .HOP-container {
+            background-color: black;
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 5px 5px 0px darkgreen;
+            max-width: 300px;
+            margin-left: 30px;
+            margin-right: auto;
+            margin-top: 100px;
+        }
+
+        .AM-container {
+            background-color: black;
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 5px 5px 0px darkgreen;
+            max-width: 300px;
+            margin-left: auto;
+            margin-right: 30px;
+            margin-top: 150px;
+        }
+
+        .HVAC-container {
+            background-color: black;
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 5px 5px 0px darkgreen;
+            max-width: 300px;
+            margin-left: 30px;
+            margin-right: auto;
+            margin-top: 150px;
+        }
+
+        .service-text {
+            font-size: 24px;
+            color: white;
+            margin-top: 20px;
+        }
+
+        .service-text-left {
+            text-align: left;
+            float: left;
+            width: 50%;
+        }
+
+        .service-text-right {
+            text-align: right;
+            float: right;
+            width: 50%;
+        }
+
+
+        .see-more-button-HOP {
+            background-color: darkgreen;
+            border-radius: 15px;
+            color: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 5px 5px 0px black;
+            max-width: 300px;
+            margin-left: auto;
+            margin-right: 440px;
+            margin-top: 10px;
+        }
+
+        .see-more-button-HOP:hover {
+            background-color: #4CAF50;
+            color: black;
+        }
+
+        .see-more-button-AMM {
+            background-color: darkgreen;
+            color: white;
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 5px 5px 0px black;
+            max-width: 300px;
+            margin-left: 450px;
+            margin-right: auto;
+            margin-top: 10px;
+        }
+
+        .see-more-button-AMM:hover {
+            background-color: #4CAF50;
+            color: black;
+        }
+
+        .see-more-button-HVAC-container {
+            background-color: darkgreen;
+            border-radius: 15px;
+            color: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 5px 5px 0px black;
+            max-width: 300px;
+            margin-left: auto;
+            margin-right: 440px;
+            margin-top: 10px;
+        }
+        .see-more-button-HVAC-container:hover {
+            background-color: #4CAF50;
+            color: black;
+        }
     </style>
 </head>
 <body>
@@ -125,27 +250,31 @@
         SERVICES
     </div>
     <div class="navbar">
-        <button onclick="window.location.href='CPSIServices.html'">Services</button>
-        <button onclick="window.location.href='CPSIAbout.html'">About</button>
-        <button onclick="window.location.href='CPSIContact.html'">Contact</button>
-        <button onclick="window.location.href='CPSIReviews.html'">Reviews</button>
-        <button onclick="window.location.href='CPSIHome.html'">Home</button>
+        <button class="button" onclick="window.location.href='CPSIServices.html'">Services</button>
+        <button class="button" onclick="window.location.href='CPSIAbout.html'">About</button>
+        <button class="button" onclick="window.location.href='CPSIContact.html'">Contact</button>
+        <button class="button" onclick="window.location.href='CPSIReviews.html'">Reviews</button>
+        <button class="button" onclick="window.location.href='CPSIHome.html'">Home</button>
     </div>
 
-    <div class="service-box" onclick="openServiceModal('Ammonia Piping', ' Ammonia piping is a safe, efficient, cost-effective, and low-carbon way of transporting ammonia.Ammonia piping can be used for refrigeration or for energy purposes.')">
-        <img class="service-image" src="Ammonia_Pipe.jpg" alt="Ammonia Piping">
-        <div class="service-label">Ammonia Piping</div>
+    <div class="offer-container">
+        <div class="offer-text">What Do We Offer?</div>
     </div>
 
-    <div class="service-box" onclick="openServiceModal('Hot-Oil Piping', 'Placeholder')">
-        <img class="service-image" src="Hot_Oil.jpg" alt="Hot-Oil Piping">
-        <div class="service-label">Hot-Oil Piping</div>
+    <div class="HOP-container">
+        <div class="offer-text">Hot-Oil Piping</div>
     </div>
+    <button class="see-more-button-HOP" onclick="window.location.href='ServicesHotOil.html'">See More</button>
 
-    <div class="service-box" onclick="openServiceModal('HVAC', 'Placeholder')">
-        <img class="service-image" src="HVAC_CPSI.jpg" alt="HVAC">
-        <div class="service-label">HVAC</div>
+    <div class="AM-container">
+        <div class="offer-text">Ammonia Piping</div>
     </div>
+    <button class="see-more-button-AMM" onclick="window.location.href='ServicesAmmonia.html'">See More</button>
+
+    <div class="HVAC-container">
+        <div class="offer-text">HVAC</div>
+    </div>
+    <button class="see-more-button-HVAC-container" onclick="window.location.href='ServicesHVAC.html'">See More</button>
 </div>
 
 <div id="serviceModal" class="modal" onclick="closeServiceModal()">
