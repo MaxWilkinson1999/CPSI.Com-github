@@ -5,23 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CPSI Home</title>
     <style>
-        body {
+         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4; 
+            background-image: url('Web_Back6.jpg'); 
+            background-repeat: no-repeat;
+            background-attachment: fixed;
         }
+       
 
-        .header {
-            text-align: center;
-            padding: 20px;
-            background-color: darkgreen;
-            color: white;
-            font-size: 24px;
-        }
+    .header {
+    text-align: center;
+    padding: 20px;
+    color: darkgreen;
+    font-size: 72px; 
+    font-family: 'Arial Black', sans-serif; 
+    font-weight: bold; 
+    border-radius: 15px; 
+    margin-bottom: 20px; 
+    text-shadow: -2px -2px 0 black, 2px -2px 0 black, -2px 2px 0 black, 2px 2px 0 black, 0 2px 0 black; 
+   }
 
         .navbar {
             text-align: center;
-            margin-top: 45px; 
+            margin-top: 25px; 
         }
 
         .dropdown {
@@ -74,8 +81,8 @@
         }
 
         .navbar a:hover {
-            background-color: teal;
-            color: white;
+            background-color:lightgreen;
+            color: black;
         }
 
         .slideshow-container {
@@ -109,6 +116,18 @@
 
         .mySlides:hover img {
             transform: scale(1.05);
+        }
+
+        .welcome-message {
+            text-align: center;
+          padding: 20px;
+          color: darkgreen;
+          font-size: 20px; 
+          font-family: 'Arial Black', sans-serif; 
+          font-weight: bold; 
+          border-radius: 15px; 
+          margin-bottom: 20px; 
+         
         }
     </style>
 </head>
@@ -170,6 +189,10 @@
     </div>
 </div>
 
+<div class="welcome-message">
+    Welcome to Carolina Piping Systems Inc., your premier destination for exceptional piping solutions. With over 30 years of dedicated service, we take immense pride in offering top-quality piping solutions to not only the Charlotte area but also clients throughout the United States. Allow us to exceed your expectations and fulfill all your piping needs with our unparalleled expertise and commitment to excellence.
+</div>
+
 <script>
     let slideIndex = 0;
     let timeout;
@@ -220,4 +243,4 @@
 </script>
 
 </body>
-</html>
+</html
