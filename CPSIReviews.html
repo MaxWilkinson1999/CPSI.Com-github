@@ -8,15 +8,21 @@
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            background-image: url('Web_Back6.jpg'); 
+            background-repeat: no-repeat;
+            background-attachment: fixed;
         }
 
         .header {
             text-align: center;
             padding: 20px;
-            background-color: darkgreen;
-            color: white;
-            font-size: 24px;
+            color: darkgreen;
+            font-size: 72px; 
+            font-family: 'Arial Black', sans-serif; 
+            font-weight: bold; 
+            border-radius: 15px; 
+            margin-bottom: 20px; 
+            text-shadow: -2px -2px 0 black, 2px -2px 0 black, -2px 2px 0 black, 2px 2px 0 black, 0 2px 0 black; 
         }
 
         .dropdown {
@@ -52,7 +58,7 @@
             color: black;
         }
 
-        button {
+        .button {
             display: inline-block;
             color: black;
             text-align: center;
@@ -64,7 +70,7 @@
             transition: background-color 0.3s, color 0.3s;
         }
 
-        button:hover {
+        .button:hover {
             background-color: darkgreen;
             color: white;
         }
@@ -82,18 +88,57 @@
             border-radius: 15px;
             margin-bottom: 20px;
         }
+
+
+        .review-cont {
+            width: 100%; /* Adjust as needed */
+            height: 100%; /* Adjust as needed */
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .image-container-review {
+            width: 600px; /* Adjust width as needed */
+            height: 600px; /* Adjust height as needed */
+            margin-left: auto;
+            margin-right: 100px; /* Adjust right margin as needed */
+            margin-top: 10px; /* Adjust top margin as needed */
+            transition: transform 0.3s ease;
+        }
+
+        .image-container-review:hover{
+            border-color: darkgreen;
+        }
+
+        #button-container2 button img {
+            width: 200px; 
+            height: auto; 
+            transition: transform 0.3s ease;
+        }
+
+        #button-container2 button:hover img {
+            transform: scale(1.1); 
+        }
+
+        .review-info {
+            text-align: center;
+            padding: 20px;
+            color: darkgreen;
+            font-size: 20px; 
+            font-family: 'Arial Black', sans-serif; 
+            font-weight: bold; 
+            border-radius: 15px; 
+            margin-bottom: 20px;
+        }
     </style>
 </head>
 <body>
 
 <div class="header">
-    Carolina Piping Systems Inc. - Reviews
+ Reviews
 </div>
 
 <div class="content">
-    <div class="label">
-        REVIEWS
-    </div>
     <div class="navbar">
         <div class="dropdown">
             <button class="button" onclick="window.location.href='CPSIServices.html'">Services</button>
@@ -108,18 +153,15 @@
         <button class="button" onclick="window.location.href='CPSIReviews.html'">Reviews</button>
         <button class="button" onclick="window.location.href='CPSIHome.html'">Home</button>
     </div>
-    <p> 
-        
-    </p>
+    <p class="review-info">CPSI, with a stellar 4.5-star rating on Google Reviews, is recognized for its excellence in piping systems. Clients praise its reliability, quality workmanship, and professionalism across services like hot-oil piping and HVAC solutions. These positive reviews reflect CPSI's commitment to customer satisfaction and its standing as a trusted leader in the industry.</p>
+    <p class="review-info">To leave a review, or have a more in-depth view, click the reviews below.</p>
 </div>
-<div id="google-reviews"></div>
-<div id="button-container">
+
+<div class="image-container-review">
     <button onclick="window.location.href='https://search.google.com/local/writereview?placeid=ChIJD4WLbTO9VogR45sCC2UQEck'" target="_blank">
-        Leave a Review
-        <img src="GOOGLEREV.jpg" alt="Button Image2">
+        <img src="Reviews_Image.png" alt="Reviews Image" class="review-cont">
     </button>
-    
 </div>
-    
+
 </body>
 </html>
