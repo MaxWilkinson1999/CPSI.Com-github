@@ -5,18 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Services at CPSI</title>
     <style>
-        body {
+         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            background-image: url('Web_Back6.jpg'); 
+            background-repeat: no-repeat;
+            background-attachment: fixed;
         }
 
         .header {
             text-align: center;
-            padding: 20px;
-            background-color: darkgreen;
-            color: white;
-            font-size: 24px;
+    padding: 20px;
+    color: darkgreen;
+    font-size: 72px; 
+    font-family: 'Arial Black', sans-serif; 
+    font-weight: bold; 
+    border-radius: 15px; 
+    margin-bottom: 20px; 
+    text-shadow: -2px -2px 0 black, 2px -2px 0 black, -2px 2px 0 black, 2px 2px 0 black, 0 2px 0 black; 
         }
 
         .button {
@@ -67,6 +73,20 @@
         }
 
         .service-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .service-image2 {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .service-image3 {
             width: 100%;
             height: 100%;
             object-fit: cover;
@@ -237,18 +257,58 @@
             background-color: #4CAF50;
             color: black;
         }
+
+        .image-container{
+            width: 300px; 
+            height: 300px;
+            border: 4px solid black; 
+            border-radius: 5px;
+            margin-left: 475px;
+            margin-top: -225px;
+            transition: transform 0.3s ease;
+        }
+        .image-container:hover {
+           transform: scale(1.1); 
+        }
+
+
+        .image-container2{
+            width: 300px; 
+            height: 300px;
+            border: 4px solid black; 
+            margin-left: auto;
+            margin-right: 475px;
+            border-radius: 5px;
+            margin-top: -300px;
+            transition: transform 0.3s ease;
+        }
+        .image-container2:hover {
+           transform: scale(1.1); 
+        }
+
+       .image-container3{
+        width: 300px; 
+            height: 300px;
+            border: 4px solid black; 
+            border-radius: 5px;
+            margin-left: 475px;
+            margin-top: -270px;
+            transition: transform 0.3s ease;
+       }
+
+        .image-container3:hover {
+           transform: scale(1.1); 
+        }
+
     </style>
 </head>
 <body>
 
 <div class="header">
-    Carolina Piping Systems Inc. - Services
+     Services
 </div>
 
 <div class="content">
-    <div class="label">
-        SERVICES
-    </div>
     <div class="navbar">
         <button class="button" onclick="window.location.href='CPSIServices.html'">Services</button>
         <button class="button" onclick="window.location.href='CPSIAbout.html'">About</button>
@@ -265,16 +325,25 @@
         <div class="offer-text">Hot-Oil Piping</div>
     </div>
     <button class="see-more-button-HOP" onclick="window.location.href='ServicesHotOil.html'">See More</button>
+    <div class="image-container">
+        <img src="HOTOIL_services.jpg" alt="Hot-Oil Piping Services" class="service-image">
+    </div>
 
     <div class="AM-container">
         <div class="offer-text">Ammonia Piping</div>
     </div>
     <button class="see-more-button-AMM" onclick="window.location.href='ServicesAmmonia.html'">See More</button>
+    <div class="image-container2">
+        <img src="Ammonia_Pipe.jpg" alt="Ammonia Pipe" class="service-image2">
+    </div>
 
     <div class="HVAC-container">
         <div class="offer-text">HVAC</div>
     </div>
     <button class="see-more-button-HVAC-container" onclick="window.location.href='ServicesHVAC.html'">See More</button>
+    <div class="image-container3">
+        <img src="HVAC_CPSI2.jpg" alt="HVAC" class="service-image3">
+    </div>
 </div>
 
 <div id="serviceModal" class="modal" onclick="closeServiceModal()">
