@@ -8,15 +8,21 @@
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            background-image: url('Web_Back6.jpg'); 
+            background-repeat: no-repeat;
+            background-attachment: fixed;
         }
 
         .header {
             text-align: center;
             padding: 20px;
-            background-color: darkgreen;
-            color: white;
-            font-size: 24px;
+            color: darkgreen;
+            font-size: 72px; 
+            font-family: 'Arial Black', sans-serif; 
+            font-weight: bold; 
+            border-radius: 15px; 
+            margin-bottom: 20px; 
+            text-shadow: -2px -2px 0 black, 2px -2px 0 black, -2px 2px 0 black, 2px 2px 0 black, 0 2px 0 black; 
         }
 
         .navbar {
@@ -43,7 +49,13 @@
 
         .content {
             text-align: center;
-            margin-top: 30px;
+            padding: 20px;
+            color: darkgreen;
+            font-size: 20px; 
+            font-family: 'Arial Black', sans-serif; 
+            font-weight: bold; 
+            border-radius: 15px; 
+            margin-bottom: 20px;
         }
 
         .label {
@@ -122,13 +134,8 @@
 <body>
 
 <div class="header">
-    Carolina Piping Systems Inc. - Hot-Oil Piping Services
+    Hot-Oil Piping Services
 </div>
-<div class="content">
-    <div class="label">
-        HOT-OIL PIPING SERVICES
-    </div>
-
 <div class="navbar">
     <button class="button" onclick="window.location.href='CPSIServices.html'">Services</button>
     <button class="button" onclick="window.location.href='CPSIAbout.html'">About</button>
@@ -137,29 +144,8 @@
     <button class="button" onclick="window.location.href='CPSIHome.html'">Home</button>
 </div>
 
-
-    <div class="service-box" onclick="openServiceModal('Hot-Oil Piping Installation', 'Placeholder')">
-        <img class="service-image" src="HotOil_Installation.jpg" alt="Hot-Oil Piping Installation">
-        <div class="service-label">Installation</div>
-    </div>
-
-    <div class="service-box" onclick="openServiceModal('Hot-Oil Piping Maintenance', 'Placeholder')">
-        <img class="service-image" src="HotOil_Maintenance.jpg" alt="Hot-Oil Piping Maintenance">
-        <div class="service-label">Maintenance</div>
-    </div>
-
-    <div class="service-box" onclick="openServiceModal('Hot-Oil Piping Repair', 'Placeholder')">
-        <img class="service-image" src="HotOil_Repair.jpg" alt="Hot-Oil Piping Repair">
-        <div class="service-label">Repair</div>
-    </div>
-</div>
-
-<div id="serviceModal" class="modal" onclick="closeServiceModal()">
-    <div class="modal-content" onclick="event.stopPropagation();">
-        <span class="close" onclick="closeServiceModal()">&times;</span>
-        <h2 id="modalTitle"></h2>
-        <p id="modalDescription"></p>
-    </div>
+<div class="content">
+    <p>Hot oil piping services involve the installation, maintenance, and repair of piping systems specifically designed to handle high-temperature oils used in industrial processes. These systems are crucial for various applications, including heat transfer, chemical processing, and manufacturing.</p>
 </div>
 
 <script>

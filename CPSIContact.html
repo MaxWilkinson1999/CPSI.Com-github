@@ -8,15 +8,21 @@
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            background-image: url('Web_Back6.jpg'); 
+            background-repeat: no-repeat;
+            background-attachment: fixed;
         }
 
         .header {
             text-align: center;
             padding: 20px;
-            background-color: darkgreen;
-            color: white;
-            font-size: 24px;
+            color: darkgreen;
+            font-size: 72px; 
+            font-family: 'Arial Black', sans-serif; 
+            font-weight: bold; 
+            border-radius: 15px; 
+            margin-bottom: 20px; 
+            text-shadow: -2px -2px 0 black, 2px -2px 0 black, -2px 2px 0 black, 2px 2px 0 black, 0 2px 0 black; 
         }
 
         .dropdown {
@@ -70,16 +76,19 @@
         }
 
         #maps-iframe {
-            width: 600px; 
-            height: 400px;
+            width: 400px; 
+            height: 400px; 
             border: 1px solid #ddd;
             border-radius: 5px;
+            position: absolute;
+            right: -80px; 
+            top: 500px; 
         }
 
         #button-container {
             display: flex;
             flex-direction: column; 
-            align-items: flex-end; 
+            align-items: flex-start; 
             padding: 20px;
         }
 
@@ -131,8 +140,8 @@
         }
 
         .phone-button {
-            background-color: darkgreen;
-            color: white;
+            background-color: white;
+            color: black;
             border: 2px solid darkgreen;
             border-radius: 10px;
             padding: 10px 20px;
@@ -143,8 +152,8 @@
         }
 
         .phone-button:hover {
-            background-color: #4CAF50;
-           color: black;
+            background-color: darkgreen;
+           color:white;
             cursor: pointer;
         }
 
@@ -154,18 +163,45 @@
             margin: 0; 
             line-height: 1; 
         }
+        
+        .contact-message {
+            color: darkgreen;
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        #gmail-button-container {
+           margin-top: 20px; 
+        }
+
+        .iframe-text {
+            position: absolute;
+            top: 410px; 
+            right: 200px;
+            color: darkgreen;
+            font-weight: bold;
+            font-size: 24px;
+        }
+
+        .iframe-text2 {
+            position: absolute;
+            top: 460px; 
+            right: 10px;
+            color: darkgreen;
+            font-weight: bold;
+            font-size: 16px;
+        }
+        
     </style>
 </head>
 <body>
 
 <div class="header">
-    Carolina Piping Systems Inc. - Contact Us
+    Contact Us
 </div>
 
 <div class="content">
-    <div class="label">
-        CONTACT
-    </div>
     <div class="navbar">
         <div class="dropdown">
             <button class="button" onclick="window.location.href='CPSIServices.html'">Services</button>
@@ -184,15 +220,23 @@
 </div>
 
 <div id="button-container">
-    <button id="gmail-button" onclick="window.location.href='https://mail.google.com/mail/?view=cm&fs=1&to=CarolinaPipingSys@gmail.com&su=Subject%20here&body=Hello,%20CPSI';">
-        <img src="GMAIL_ICON_IMAGE.jpg" alt="Gmail Button Image">
-        <span class="green-button-text">Click here for business inquiries.</span>
-    </button>
+    <p class="contact-message">Contact Us Today!</p>
+    <p class="contact-message">Office Hours:</p>
+    <p class="contact-message">Monday through Thursday: 7AM - 5PM</p>
+    <p class="contact-message">Friday through Sunday: Closed</p>
+    <p class="contact-message"></p>
+    <p class="contact-message">Office Phone Number</p>
     <button class="phone-button" onclick="window.location.href='tel:704-740-0097';">
-        <span class="phone-button-text">704-740-0097 (Office Number)</span>
+        <span class="phone-button-text">704-740-0097</span>
     </button>
+    <p class="iframe-text">Address:</p>
+    <p class = "iframe-text2">3716 Performance Rd, Charlotte, NC 28214</p>
     <iframe id="maps-iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3257.9216887247776!2d-80.99174052349078!3d35.25820397272665!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8856bd336d8b850f%3A0xc91110650b029be3!2sCarolina%20Piping%20Systems%20Inc!5e0!3m2!1sen!2sus!4v1710189247124!5m2!1sen!2sus" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <p class="contact-message">Business Email:</p>
+    <button id="gmail-button" onclick="window.location.href='https://mail.google.com/mail/?view=cm&fs=1&to=CarolinaPipingSys@gmail.com&su=Subject%20here&body=Hello,%20CPSI';">
+        <span class="green-button-text">Click here for business inquiries.</span>
+        <img src="GMAIL_ICON_IMAGE.jpg" alt="Gmail Button Image">
+    </button>
 </div>
-
 </body>
 </html>

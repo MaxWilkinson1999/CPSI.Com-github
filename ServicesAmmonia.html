@@ -8,15 +8,21 @@
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            background-image: url('Web_Back6.jpg'); 
+            background-repeat: no-repeat;
+            background-attachment: fixed;
         }
 
         .header {
             text-align: center;
             padding: 20px;
-            background-color: darkgreen;
-            color: white;
-            font-size: 24px;
+            color: darkgreen;
+            font-size: 72px; 
+            font-family: 'Arial Black', sans-serif; 
+            font-weight: bold; 
+            border-radius: 15px; 
+            margin-bottom: 20px; 
+            text-shadow: -2px -2px 0 black, 2px -2px 0 black, -2px 2px 0 black, 2px 2px 0 black, 0 2px 0 black; 
         }
 
         .navbar {
@@ -43,7 +49,13 @@
 
         .content {
             text-align: center;
-            margin-top: 30px;
+            padding: 20px;
+            color: darkgreen;
+            font-size: 20px; 
+            font-family: 'Arial Black', sans-serif; 
+            font-weight: bold; 
+            border-radius: 15px; 
+            margin-bottom: 20px;
         }
 
         .label {
@@ -122,13 +134,8 @@
 <body>
 
 <div class="header">
-    Carolina Piping Systems Inc. - Ammonia Piping
+    Ammonia Piping
 </div>
-<div class="content">
-    <div class="label">
-        AMMONIA PIPING
-    </div>
-
 <div class="navbar">
     <button class="button" onclick="window.location.href='CPSIServices.html'">Services</button>
     <button class="button" onclick="window.location.href='CPSIAbout.html'">About</button>
@@ -136,8 +143,9 @@
     <button class="button" onclick="window.location.href='CPSIContact.html'">Contact</button>
     <button class="button" onclick="window.location.href='CPSIHome.html'">Home</button>
 </div>
-<div class="body">
-     PLACEHOLDER
+
+<div class="content">
+    <p>Our ammonia piping services are designed to meet the stringent requirements of industrial refrigeration systems, food processing plants, cold storage facilities, and other ammonia-based applications. From meticulous planning and precise installation to ongoing maintenance and safety inspections, we specialize in delivering reliable and compliant ammonia piping solutions. Our experienced team ensures the integrity, efficiency, and safety of ammonia piping systems, providing comprehensive support to maximize operational performance and minimize downtime.</p>
 </div>
 
 <div id="serviceModal" class="modal" onclick="closeServiceModal()">
