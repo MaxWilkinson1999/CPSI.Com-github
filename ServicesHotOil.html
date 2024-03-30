@@ -129,6 +129,39 @@
             right: 10px;
             cursor: pointer;
         }
+
+        .slideshow-container {
+            max-width: 600px;
+            max-height: 300px;
+            margin: auto;
+            position: relative;
+            overflow: hidden;
+            margin-top: 30px;
+            border: 10px solid grey;
+            border-radius: 15px; 
+        }
+
+        .mySlides {
+            display: none;
+            text-align: center;
+            width: 100%; 
+            transition: transform 0.3s;
+        }
+
+        .mySlides img {
+            width: 100%; 
+            height: 300px; 
+            object-fit: cover; 
+            transition: transform 0.3s;
+        }
+
+        .mySlides:hover {
+            transform: scale(1.05);
+        }
+
+        .mySlides:hover img {
+            transform: scale(1.05);
+        }
     </style>
 </head>
 <body>
@@ -148,17 +181,65 @@
     <p>Hot oil piping services involve the installation, maintenance, and repair of piping systems specifically designed to handle high-temperature oils used in industrial processes. These systems are crucial for various applications, including heat transfer, chemical processing, and manufacturing.</p>
 </div>
 
+<div class="slideshow-container" onmouseover="pauseSlides()" onmouseout="resumeSlides()">
+    <div class="mySlides">
+        <img src="Hot_Oil.jpg" alt="Image 0">
+    </div>
+    <div class="mySlides">
+        <img src="Hot_Oil2.jpg" alt="Image 0">
+    </div>
+    <div class="mySlides">
+        <img src="Hot_Oil3.jpg" alt="Image 0">
+    </div>
+    <div class="mySlides">
+        <img src="Hot_Oil4.jpg" alt="Image 0">
+    </div>
+    <div class="mySlides">
+        <img src="Hot_Oil5.jpg" alt="Image 0">
+    </div>
+    <div class="mySlides">
+        <img src="Hot_Oil6.jpg" alt="Image 0">
+    </div>
+    <div class="mySlides">
+        <img src="Hot_Oil7.jpg" alt="Image 0">
+    </div>
+</div>
+
 <script>
-    function openServiceModal(title, description) {
-        document.getElementById('modalTitle').innerText = title;
-        document.getElementById('modalDescription').innerText = description;
-        document.getElementById('serviceModal').style.display = 'flex';
+    let slideIndex = 0;
+    let timeout;
+
+    showSlides();
+
+    function showSlides() {
+        let i;
+        const slides = document.getElementsByClassName("mySlides");
+
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+
+        slideIndex++;
+
+        if (slideIndex > slides.length) {
+            slideIndex = 1;
+        }
+
+        slides[slideIndex - 1].style.display = "block";
+        timeout = setTimeout(showSlides, 4000);
     }
 
-    function closeServiceModal() {
-        document.getElementById('modalTitle').innerText = '';
-        document.getElementById('modalDescription').innerText = '';
-        document.getElementById('serviceModal').style.display = 'none';
+    function plusSlides(n) {
+        clearTimeout(timeout); 
+        showSlides((slideIndex += n));
+    }
+
+    function pauseSlides() {
+        clearTimeout(timeout);
+    }
+
+    function resumeSlides() {
+        timeout = setTimeout(showSlides, 4000);
     }
 </script>
 

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services at CPSI - Hot-Oil Piping</title>
+    <title>Services at CPSI - Ammonia</title>
     <style>
         body {
             margin: 0;
@@ -129,6 +129,39 @@
             right: 10px;
             cursor: pointer;
         }
+
+        .slideshow-container {
+            max-width: 600px;
+            max-height: 300px;
+            margin: auto;
+            position: relative;
+            overflow: hidden;
+            margin-top: 30px;
+            border: 10px solid grey;
+            border-radius: 15px; 
+        }
+
+        .mySlides {
+            display: none;
+            text-align: center;
+            width: 100%; 
+            transition: transform 0.3s;
+        }
+
+        .mySlides img {
+            width: 100%; 
+            height: 300px; 
+            object-fit: cover; 
+            transition: transform 0.3s;
+        }
+
+        .mySlides:hover {
+            transform: scale(1.05);
+        }
+
+        .mySlides:hover img {
+            transform: scale(1.05);
+        }
     </style>
 </head>
 <body>
@@ -148,25 +181,62 @@
     <p>Our ammonia piping services are designed to meet the stringent requirements of industrial refrigeration systems, food processing plants, cold storage facilities, and other ammonia-based applications. From meticulous planning and precise installation to ongoing maintenance and safety inspections, we specialize in delivering reliable and compliant ammonia piping solutions. Our experienced team ensures the integrity, efficiency, and safety of ammonia piping systems, providing comprehensive support to maximize operational performance and minimize downtime.</p>
 </div>
 
-<div id="serviceModal" class="modal" onclick="closeServiceModal()">
-    <div class="modal-content" onclick="event.stopPropagation();">
-        <span class="close" onclick="closeServiceModal()">&times;</span>
-        <h2 id="modalTitle"></h2>
-        <p id="modalDescription"></p>
+<div class="slideshow-container" onmouseover="pauseSlides()" onmouseout="resumeSlides()">
+    <div class="mySlides">
+        <img src="Ammonia_1.jpg" alt="Ammonia Image 1">
+    </div>
+    <div class="mySlides">
+        <img src="Ammonia_2.jpg" alt="Ammonia Image 2">
+    </div>
+    <div class="mySlides">
+        <img src="Ammonia_3.jpg" alt="Ammonia Image 2">
+    </div>
+    <div class="mySlides">
+        <img src="Ammonia_4.jpg" alt="Ammonia Image 2">
+    </div>
+    <div class="mySlides">
+        <img src="Ammonia_5.jpg" alt="Ammonia Image 2">
+    </div>
+    <div class="mySlides">
+        <img src="Ammonia_6.jpg" alt="Ammonia Image 2">
     </div>
 </div>
 
 <script>
-    function openServiceModal(title, description) {
-        document.getElementById('modalTitle').innerText = title;
-        document.getElementById('modalDescription').innerText = description;
-        document.getElementById('serviceModal').style.display = 'flex';
+    let slideIndex = 0;
+    let timeout;
+
+    showSlides();
+
+    function showSlides() {
+        let i;
+        const slides = document.getElementsByClassName("mySlides");
+
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+
+        slideIndex++;
+
+        if (slideIndex > slides.length) {
+            slideIndex = 1;
+        }
+
+        slides[slideIndex - 1].style.display = "block";
+        timeout = setTimeout(showSlides, 4000);
     }
 
-    function closeServiceModal() {
-        document.getElementById('modalTitle').innerText = '';
-        document.getElementById('modalDescription').innerText = '';
-        document.getElementById('serviceModal').style.display = 'none';
+    function plusSlides(n) {
+        clearTimeout(timeout); 
+        showSlides((slideIndex += n));
+    }
+
+    function pauseSlides() {
+        clearTimeout(timeout);
+    }
+
+    function resumeSlides() {
+        timeout = setTimeout(showSlides, 4000);
     }
 </script>
 
