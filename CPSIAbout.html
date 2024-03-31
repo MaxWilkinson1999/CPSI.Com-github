@@ -58,7 +58,7 @@
             color: black;
         }
 
-        button {
+        .button {
             display: inline-block;
             color: black;
             text-align: center;
@@ -113,11 +113,34 @@
            margin-bottom: 20px;
         }
 
+        .facility-image-container {
+            display: flex;
+            justify-content: center;
+        }
 
+        .facility-image {
+            width: 200px; 
+            height: auto; 
+            border: 2px solid darkgreen; 
+            border-radius: 5px; 
+            margin: 25px; 
+            cursor: pointer; 
+            transition: transform 0.3s; 
+        }
 
-        .visionaries-section {
-            padding: 20px;
-            text-align: left;
+        .facility-image:first-child {
+            height: 250px; 
+        }
+
+        .facility-image:hover {
+            transform: scale(1.1); 
+        }
+
+        .facility-name {
+            margin-top: 5px;
+            color: darkgreen;
+            font-size: 16px;
+            font-weight: bold;
         }
 
         .popup-container {
@@ -150,101 +173,11 @@
             cursor: pointer;
         }
 
-        .facility-image-button {
-            display: inline-block;
-            background-color: transparent;
-            border: none; 
-            padding: 0;
-            margin: 0;
-            max-width: 40%;
-            cursor: pointer;
-            border-radius: 5px;
-            overflow: hidden;
-            transition: background-color 0.3s, color 0.3s;
-            margin-right:  1000px;
-        }
-
-        .facility-image-button2 {
-            display: inline-block;
-            background-color: transparent;
-            border: none; 
-            padding: 0;
-            margin: 0;
-            max-width: 40%;
-            cursor: pointer;
-            border-radius: 5px;
-            overflow: hidden;
-            margin-right:  1000px;
-        }
-
-        .facility-image-button3 {
-            display: inline-block;
-            background-color: transparent;
-            border: none; 
-            padding: 0;
-            margin: 0;
-            max-width: 40%;
-            cursor: pointer;
-            border-radius: 5px;
-            overflow: hidden;
-            margin-right:  1000px;
-        }
-
-        .facility-image {
-            max-width: 40%;
+        .popup-image {
+            max-width: 200px;
             height: auto;
-            border-radius: 5px;
-            margin-right:  1000px;
+            margin-bottom: 10px;
         }
-
-        .facility-image2 {
-            max-width: 40%;
-            height: auto;
-            border-radius: 5px;
-            margin-right:  400px;
-        }
-
-        .facility-image3 {
-            max-width: 40%;
-            height: auto;
-            border-radius: 5px;
-            margin-right:  400px;
-        }
-
-       
-        .facility-image-button:hover {
-            transform: scale(1.05);
-        }
-
-        .facility-image-button2:hover {
-            transform: scale(1.05);
-        }
-
-        .facility-image-button3:hover {
-            transform: scale(1.05);
-        }
-
-        .facility-image-button:hover {
-            background-color: transparent;
-            margin-right:  1000px;
-        }
-
-        .facility-image-button2:hover {
-            background-color: transparent;
-            margin-right:  1000px;
-        }
-
-        .facility-image-button3:hover {
-            background-color: transparent;
-            margin-right:  1000px;
-        }
-
-        .visionaries-section h3 {
-        margin-right:  100px;
-    }
-    .visionaries-section h2 {
-        margin-bottom: 50px; 
-    }
     </style>
 </head>
 <body>
@@ -254,7 +187,6 @@
 </div>
 
 <div class="content">
-
 
     <div class="navbar">
         <div class="dropdown">
@@ -293,46 +225,45 @@
     <div class="visionaries-section">
         <h2>Meet the Visionaries</h2>
 
+        <div class="facility-image-container">
+            <a href="#" onclick="openServiceModal('Mark Wilkinson', 'As the original Co-Founder and visionary leader of Carolina Piping Systems Inc., Mark stands as a beacon of innovation and excellence in the industry. With a wealth of experience spanning decades, his profound expertise has been pivotal in steering Carolina Piping Systems toward unparalleled success. Marks unwavering commitment to excellence is evident in every facet of the companys operations, from project inception to completion. His visionary leadership and dedication to quality have not only cemented Carolina Piping Systems reputation as an industry leader but have also laid the foundation for its continued growth and prosperity.', 'Dad_Image1.jpg');">
+                <img class="facility-image" src="Dad_Image1.jpg" alt="Mark Wilkinson">
+                <h3 class="facility-name">Mark Wilkinson</h3>
+            </a>
 
-    
-       <h3>Mark Wilkinson</h3>
-        <button class="facility-image-button" onclick="openServiceModal('Mark Wilkinson', 'As the original Co-Founder and visionary leader of Carolina Piping Systems Inc., Mark stands as a beacon of innovation and excellence in the industry. With a wealth of experience spanning decades, his profound expertise has been pivotal in steering Carolina Piping Systems toward unparalleled success. Marks unwavering commitment to excellence is evident in every facet of the companys operations, from project inception to completion. His visionary leadership and dedication to quality have not only cemented Carolina Piping Systems reputation as an industry leader but have also laid the foundation for its continued growth and prosperity.');">
-            <img class="facility-image" src="Dad_Image1.jpg" alt="Mark Wilkinson">
-        </button>
-        
-    
-        <h3>Jason Wilkinson</h3>
-        <button class="facility-image-button2" onclick="openServiceModal('Jason Wilkinson','The newest member of the illustrious trio at Carolina Piping Systems and its youngest owner. With a dynamic blend of youthful energy and unwavering dedication, Jason brings a breath of fresh air to CPSI. His innovative thinking and tireless work ethic infuse the company with renewed vitality, paving the way for exciting new horizons.');">
-            <img class="facility-image2" src="Jason_W.JPG" alt="Second Person">
-        </button>
-        
-    
-        <h3>Johnny Wilkinson</h3>
-        <button class="facility-image-button3" onclick="openServiceModal('Johhny Wilkinson', 'One of the esteemed original co-founders and the senior figure among the owners at Carolina Piping Systems. With a wealth of experience garnered over years of dedicated service, Johnny embodies the cornerstone of Carolina Piping Systems legacy. His seasoned expertise and steadfast leadership provide a guiding light, anchoring the companys values and vision. As the elder statesman of the team, Johnnys enduring commitment sets a standard of excellence for all to follow, ensuring CPSIs continued success for years to come.');">
-            <img class="facility-image3" src="image1.jpeg" alt="Third Person">
-        </button>
-       
-    
+            <a href="#" onclick="openServiceModal('Jason Wilkinson','The newest member of the illustrious trio at Carolina Piping Systems and its youngest owner. With a dynamic blend of youthful energy and unwavering dedication, Jason brings a breath of fresh air to CPSI. His innovative thinking and tireless work ethic infuse the company with renewed vitality, paving the way for exciting new horizons.','Jason_W.JPG');">
+                <img class="facility-image" src="Resized_Screenshot_20171023-105312_244777338130895_1711338103058.jpg" alt="Second Person">
+                <h3 class="facility-name">Jason Wilkinson</h3>
+            </a>
+
+            <a href="#" onclick="openServiceModal('Johhny Wilkinson', 'One of the esteemed original co-founders and the senior figure among the owners at Carolina Piping Systems. With a wealth of experience garnered over years of dedicated service, Johnny embodies the cornerstone of Carolina Piping Systems legacy. His seasoned expertise and steadfast leadership provide a guiding light, anchoring the companys values and vision. As the elder statesman of the team, Johnnys enduring commitment sets a standard of excellence for all to follow, ensuring CPSIs continued success for years to come.', 'image1.jpeg');">
+                <img class="facility-image" src="image1.jpeg" alt="Third Person">
+                <h3 class="facility-name">Johnny Wilkinson</h3>
+            </a>
+        </div>
+
         <div id="serviceModal" class="popup-container" onclick="closeServiceModal()">
             <div class="popup" onclick="event.stopPropagation();">
                 <span class="close-button" onclick="closeServiceModal()">&times;</span>
                 <h3 id="modalTitle"></h3>
+                <img id="modalImage" class="popup-image" src="" alt="">
                 <p id="modalDescription"></p>
             </div>
-        </div>
+        </div>        
     </div>
-    
 
 <script>
-    function openServiceModal(title, description) {
+    function openServiceModal(title, description, imageSrc) {
         document.getElementById('modalTitle').innerText = title;
         document.getElementById('modalDescription').innerText = description;
+        document.getElementById('modalImage').src = imageSrc;
         document.getElementById('serviceModal').style.display = 'flex';
     }
 
     function closeServiceModal() {
         document.getElementById('modalTitle').innerText = '';
         document.getElementById('modalDescription').innerText = '';
+        document.getElementById('modalImage').src = '';
         document.getElementById('serviceModal').style.display = 'none';
     }
 </script>
